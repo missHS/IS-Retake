@@ -40,6 +40,26 @@ public class Department {
 	public void removeProject(Project project) {
 		this.projectList.remove(project.getProjectID());
 	}
+	
+	public void editDepartmentName(Department department, String name) {
+		department.setName(name);
+	}
+	
+	public void editDepartmentBudget(Department department, double budget) {
+		department.setBudget(budget);
+	}
+	
+	public void addToDepartmentBudget(Department department, double sum) {
+		double newBudget = department.getBudget();
+		newBudget += sum;
+		department.setBudget(newBudget);
+	}
+	
+	public void subtractFromDepartmentBudget(Department department, double sum) {
+		double newBudget = department.getBudget();
+		newBudget -= sum;
+		department.setBudget(newBudget);
+	}
 
 
 }

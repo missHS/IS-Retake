@@ -17,11 +17,7 @@ public class Test {
 		
 		employeeRegister.addEmployee(e1);
 		employeeRegister.addEmployee(e2);
-		
-	
-		
-		System.out.println(e1.getEmployeeID());
-		System.out.println(e2.getEmployeeID());
+
 		
 		EmployeeFrame employeeFrame = new EmployeeFrame(new Controller(employeeRegister, departmentRegister,projectRegister));
 		employeeFrame.setVisible(true);
