@@ -7,6 +7,7 @@ public class Employee {
 	private String name;
 	private double salary;
 	private Project project; 
+	private int counter = 23000; //Funkar detta eller ska det till controller/register
 
 	
 	public Project getProject() {
@@ -34,6 +35,21 @@ public class Employee {
 		this.salary = salary;
 	}
 	
+	public String generateEmployeeID() {
+		String iD = "E"+Integer.toString(counter++);
+		return iD;
+	}
 	
+	public void editEmployeeName(Employee employee, String name) {
+		employee.setName(name);
+	}
+	
+	public void editEmployeeSalary(Employee employee, double salary) {
+		employee.setSalary(salary);
+	}
+	
+	public void editEmployeeProject(Employee employee, Project project) {
+		employee.setProject(project);
+	}
 
 }

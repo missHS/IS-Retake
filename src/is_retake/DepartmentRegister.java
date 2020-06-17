@@ -27,12 +27,6 @@ public class DepartmentRegister {
 		return departmentList.get(departmentID);
 	}
 	
-	public void editDepartmentName(Department department, String name) {
-		department.setName(name);
-	}
-	
-	public void editDepartmentBudget(Department department, double budget) {
-		department.setBudget(budget);
-	}
+
 
 }

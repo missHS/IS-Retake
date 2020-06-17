@@ -6,7 +6,7 @@ import java.util.Map;
 public class EmployeeRegister {
 
 	private Map<String, Employee> employeeList = new HashMap<String, Employee>();
-	private int counter = 23000;
+	
 
 	public Map<String, Employee> getEmployeeList() {
 		return employeeList;
@@ -28,9 +28,5 @@ public class EmployeeRegister {
 		return employeeList.get(employeeID);
 	}
 
-	public String generateEmployeeID() {
-		String iD = "E"+Integer.toString(counter++);
-		return iD;
 
-	}
 }
