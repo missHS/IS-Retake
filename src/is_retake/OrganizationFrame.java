@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class EmployeeFrame extends JFrame {
+public class OrganizationFrame extends JFrame {
 
 	private JPanel contentPane;
 	private Controller controller;
@@ -28,7 +28,7 @@ public class EmployeeFrame extends JFrame {
 	}
 
 
-	public EmployeeFrame(Controller controller) {
+	public OrganizationFrame(Controller controller) {
 		this.controller = controller;
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 594, 515);

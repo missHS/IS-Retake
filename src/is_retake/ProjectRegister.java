@@ -33,16 +33,5 @@ public class ProjectRegister {
 		return projectList.get(projectID);
 	}
 	
-	public String projectIDGenerator() {
-		String iD = "P"+Integer.toString(counter++);
-		return iD;			
-	}
-	
-	public void editProjectName(Project project, String name) {
-		project.setName(name);
-	}
 
-	public void editProjectBudget(Project project, double budget) {
-		project.setBudget(budget);
-	}
-}
+}	

@@ -7,8 +7,13 @@ public class Employee {
 	private String name;
 	private double salary;
 	private Project project; 
-	private int counter = 23000; //Funkar detta eller ska det till controller/register
+	private static int counter = 23000; //Funkar detta eller ska det till controller/register
 
+	public Employee(String name, double salary) {
+		this.name=name;
+		this.salary=salary;
+		this.employeeID= generateEmployeeID();
+	}
 	
 	public Project getProject() {
 		return project;
@@ -35,7 +40,7 @@ public class Employee {
 		this.salary = salary;
 	}
 	
-	public String generateEmployeeID() {
+	public static String generateEmployeeID() {
 		String iD = "E"+Integer.toString(counter++);
 		return iD;
 	}

@@ -9,13 +9,13 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 
-public class Frametest extends JFrame {
+public class ProjectFrame extends JFrame {
 
 	private JPanel contentPane;
 	
 	
 
-	public Frametest(Controller controller) {
+	public ProjectFrame(Controller controller) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		setBounds(100, 100, 450, 300);
