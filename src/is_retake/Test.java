@@ -8,19 +8,16 @@ public class Test {
 		DepartmentRegister departmentRegister = new DepartmentRegister();
 		ProjectRegister projectRegister = new ProjectRegister();
 		
-		Employee e1 = new Employee();
-		e1.setName("Helene");
-		e1.setEmployeeID(employeeRegister.generateEmployeeID());
-		Employee e2 = new Employee();
-		e2.setName("Joakim");
-		e2.setEmployeeID(employeeRegister.generateEmployeeID());
+		Employee e1 = new Employee("Helene", 45000);
+		Employee e2 = new Employee("Joakim", 40000);
+		
 		
 		employeeRegister.addEmployee(e1);
 		employeeRegister.addEmployee(e2);
 
 		
-		EmployeeFrame employeeFrame = new EmployeeFrame(new Controller(employeeRegister, departmentRegister,projectRegister));
-		employeeFrame.setVisible(true);
+		Main_Frame mainFrame = new Main_Frame(new Controller(employeeRegister, departmentRegister,projectRegister));
+		mainFrame.setVisible(true);
 	}
 
 }

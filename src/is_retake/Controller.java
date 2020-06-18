@@ -10,16 +10,16 @@ public class Controller {
 	DepartmentRegister departmentRegister;
 	ProjectRegister projectRegister;
 	
-	Frametest framtest = new Frametest(this);
-	EmployeeFrame employeeFrame = new EmployeeFrame(this);
-
+	ProjectFrame projectFrame = new ProjectFrame(this);
+	Main_Frame mainFrame = new Main_Frame(this);
+	OrganizationFrame organisationFrame = new OrganizationFrame(this);
 
 	public Controller() {
 		
 		this.employeeRegister = new EmployeeRegister();
 		this.departmentRegister = new DepartmentRegister();
 		this.projectRegister = new ProjectRegister();		
-		//Comment
+		
 	}
 
 	public Controller(EmployeeRegister employeeRegister, DepartmentRegister departmentRegister,
@@ -31,8 +31,8 @@ public class Controller {
 	}
 	
 	public void testFrame(){	
-				employeeFrame.setVisible(false);
-				framtest.setVisible(true);
+				mainFrame.setVisible(false);
+				fest.setVisible(true);
 			}
 		
 		
