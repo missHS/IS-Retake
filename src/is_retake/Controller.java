@@ -1,7 +1,5 @@
 package is_retake;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Controller {
 
@@ -12,7 +10,7 @@ public class Controller {
 	
 	ProjectFrame projectFrame = new ProjectFrame(this);
 	Main_Frame mainFrame = new Main_Frame(this);
-	OrganizationFrame organisationFrame = new OrganizationFrame(this);
+	OrganizationFrame organizationFrame = new OrganizationFrame(this);
 
 	public Controller() {
 		
@@ -30,10 +28,43 @@ public class Controller {
 		this.projectRegister = projectRegister;
 	}
 	
-	public void testFrame(){	
+	public void backToMainMenu(){
+		mainFrame.setVisible(true);
+		organizationFrame.setVisible(false);
+		projectFrame.setVisible(false);
+	}
+	
+	public void showOrganizationFrame(){	
 				mainFrame.setVisible(false);
-				fest.setVisible(true);
+				organizationFrame.setVisible(true);
+				projectFrame.setVisible(false);
+
 			}
+	
+	public void showProjectFrame() {
+		mainFrame.setVisible(false);
+		organizationFrame.setVisible(false);
+		projectFrame.setVisible(true);
+		
+	}
+	
+	public void showAddDeptPane() {
+		organizationFrame.getNewDepartmentPanel().setVisible(true);		
+		organizationFrame.getReportsPanel().setVisible(false);
+		organizationFrame.getEditDeptPanel().setVisible(false);
+	}
+	
+	public void showEditDeptPane() {
+		organizationFrame.getNewDepartmentPanel().setVisible(false);
+		organizationFrame.getEditDeptPanel().setVisible(true);
+		organizationFrame.getReportsPanel().setVisible(false);
+	}
+	
+	public void showReportsPane() {
+		organizationFrame.getNewDepartmentPanel().setVisible(false);
+		organizationFrame.getEditDeptPanel().setVisible(false);
+		organizationFrame.getReportsPanel().setVisible(true);
+	}
 		
 		
 	}
